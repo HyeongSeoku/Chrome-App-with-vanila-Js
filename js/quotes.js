@@ -47,4 +47,4 @@ const author = document.querySelector("#quote span:last-child");
 const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)]; //random() = 0~1사이의 랜덤한 수 리턴 :floor을 쓴 이유
 
 quote.innerText = todaysQuote.quote;
-author.innerText = todaysQuote.author;
+author.innerText = `-${todaysQuote.author}-`;
