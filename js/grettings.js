@@ -4,6 +4,7 @@ const gretting = document.querySelector("#gretting");
 
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "userName";
+const time = parseInt(new Date().getHours());
 
 function onLoginSubmit(event) {
   event.preventDefault();
@@ -15,7 +16,16 @@ function onLoginSubmit(event) {
 
 function paintGrettings(username) {
   gretting.classList.remove(HIDDEN_CLASSNAME);
-  gretting.innerText = `Hello ${username} !`;
+  if (6 <= time && time < 12) {
+    gretting.innerText = `Good Morning ${username} .`;
+  } else if (12 <= time && time < 19) {
+    gretting.innerText = `Good afthernoon ${username} .`;
+  } else if (19 <= time && time < 22) {
+    gretting.innerText = `Good Evening ${username} .`;
+  } else {
+    gretting.innerText = `Good night ${username} .`;
+  }
+  console.log(time);
 }
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
@@ -26,3 +36,9 @@ if (savedUsername === null) {
 } else {
   paintGrettings(savedUsername);
 }
+
+function editGrettings() {
+  console.log("MouseOver Event rejacted!");
+}
+
+gretting.addEventListener("mouseover", editGrettings);

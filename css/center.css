@@ -1,0 +1,53 @@
+.center {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.center #name__input {
+  appearance: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 36px;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.8);
+  margin-bottom: 20px;
+}
+
+.center #name__input::placeholder {
+  color: white;
+  opacity: 0.7;
+}
+
+.center #name__input:focus,
+.center #name__input:active {
+  outline: none;
+}
+
+.center #gretting {
+  font-size: 40px;
+  font-weight: 800;
+  margin-top: 20px;
+}
+
+.center #todo-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 30px;
+  border: 1px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.center #todo-list li {
+  margin-top: 10px;
+  font-size: 20px;
+  display: flex;
+}
+
+.center #todo-list li span {
+  flex-grow: 1;
+}

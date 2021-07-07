@@ -1,0 +1,16 @@
+.top {
+  height: 25%;
+  margin-top: 30px;
+  display: flex;
+  align-items: baseline;
+}
+.top #date {
+  flex-grow: 1;
+  margin-left: 20px;
+  font-size: 18px;
+}
+.top #weather {
+  display: flex;
+  margin-right: 20px;
+  font-size: 23px;
+}
