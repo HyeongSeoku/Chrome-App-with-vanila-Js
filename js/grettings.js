@@ -23,9 +23,8 @@ function paintGrettings(username) {
   } else if (19 <= time && time < 22) {
     gretting.innerText = `Good Evening ${username} .`;
   } else {
-    gretting.innerText = `Good night ${username} .`;
+    gretting.innerText = `It's a Good night ${username} .`;
   }
-  console.log(time);
 }
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
